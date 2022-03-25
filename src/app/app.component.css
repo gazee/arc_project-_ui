@@ -1,0 +1,22 @@
+
+#layoutsidenav{
+    display: flex;
+    }
+    
+    #layoutsidenav_nav{
+    float: left;
+    background-color: blueviolet;
+    width: 22%;
+    
+    }
+    #layoutsidenav_content{
+    float: left;
+    width: 100%;
+    }
+    #footer-content{
+        position: fixed;
+    }
+
+
+
+

@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+#layoutsidenav{
+display: flex;
+}
+
+#layoutsidenav_nav{
+float: left;
+width: 30%;
+}
+#layoutsidenav_content{
+float: left;
+width: 70%;
+}
+#footer-content{
+    position: fixed;
+}
+

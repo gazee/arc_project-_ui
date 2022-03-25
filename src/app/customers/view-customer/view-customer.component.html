@@ -1,0 +1,24 @@
+<p>view-customer works</p>
+<h3 class="m-4">Customer Deatils </h3>
+ <table class="card p-2 m-4">
+    <tr hidden>
+        <td class="p-2" >Customer Id</td><td>{{custemerDetails._id}}</td>
+    </tr>
+    <tr>
+        <td class="p-2">First Name</td><td>{{custemerDetails.firstname}}</td>
+    </tr>
+    <tr>
+        <td class="p-2">Last Name</td><td>{{custemerDetails.lastname}}</td>
+    </tr>
+    <tr>
+        <td class="p-2">phone Number</td><td>{{custemerDetails.phonenumber}}</td>
+    </tr>
+    <tr>    
+        <td class="p-2">Email Address</td><td>{{custemerDetails.emailAddress}}</td>
+    </tr>
+</table> 
+<div class="ml-5">
+    <button class="btn btn-danger" [routerLink]="['../../delete/{{custemerDetails._id}}']" >Delete</button>
+    <button class="btn btn-warning" [routerLink]="['../../edit/{{custemerDetails._id}}']">Edit</button>
+</div>
+
