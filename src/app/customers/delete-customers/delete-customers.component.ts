@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import {CustomerService} from '../../services/customer.service';
 
 @Component({
@@ -9,7 +9,7 @@ import {CustomerService} from '../../services/customer.service';
 })
 export class DeleteCustomersComponent implements OnInit {
   customerId;
-  constructor(private activatedRoute:ActivatedRoute,private CustomerService:CustomerService) { }
+  constructor(private activatedRoute:ActivatedRoute,private CustomerService:CustomerService,private router:Router) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(data=>{
@@ -19,9 +19,10 @@ export class DeleteCustomersComponent implements OnInit {
      //console.log(data)
      })
      if(this.customerId){
-       this.CustomerService.viewcustomer(this.customerId).subscribe(data=>{
-        //  console.log(data)
-         let text="deleted";
+       this.CustomerService.deletecustomer(this.customerId).subscribe(data=>{
+          console.log(data)
+        //  let text="deleted";
+        this.router.navigate(['/customer'])
        })
        
      }

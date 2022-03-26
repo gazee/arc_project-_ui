@@ -5,7 +5,7 @@ export const environment = {
         GET_ALL_CUSTOMER:'list',
         GET_CUSTOMER:'view',
         UPDATE_CUSTOMER:'edit',
-        DELETE_CUSTOMER:' delete',
+        DELETE_CUSTOMER:'delete',
         SEARCH_CUSTOMER:'delete',
         ADD_CUSTOMER:'add'
     },

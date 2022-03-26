@@ -42,12 +42,22 @@ user={
     } 
   }
  
-  onsubmit(form:any){
+  async onsubmit(form:any){
     let user=form.value
      console.log(user)
-    this.CustomerService.editcustomer(this.customerId,user).subscribe(res=>console.log('from ts',res))
-     this.router.navigate(['/customer'])
-     
+    this.CustomerService.editcustomer(this.customerId,user).subscribe(res=>{
+      console.log('from ts',res)
+      // this.router.navigate(['/customer'])
+    })
+      await this.router.navigate(['/customer'])
+
+      /*
+      note:
+      above awaite eyuthiyillel customer pagil edit cheythathu upadate cheyan nam veendum manually refresh cheyendivarum
+      evide async function akkiyathu vayi oru step kayije adutha step call cheyyu
+
+      >above problem we can solve by calling navigate in subscribe function also
+     */
    
   }
 

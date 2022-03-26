@@ -26,11 +26,11 @@ export class AddCustomersComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onsubmit(value:any){
+  async onsubmit(value:any){
     console.log(value)
-  this.CustomerService.addcustomer(this.user).subscribe(res=>console.log('from ts',res))
+    this.CustomerService.addcustomer(this.user).subscribe(res=>console.log('from ts',res))
   
-     this.router.navigate(['/customer'])
+    await this.router.navigate(['/customer'])
   }
   
 

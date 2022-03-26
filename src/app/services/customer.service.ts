@@ -36,10 +36,12 @@ export class CustomerService {
     return this.HttpClient.put(url +id,user);
   }
 
-  deletecustomer(id){
-    let url=environment.CUSTOMER_BASE_URL +environment.CUSTOMER.DELETE_CUSTOMER+"/"+id;
+  deletecustomer(id:any){
+      console.log(id);
+    let url=environment.CUSTOMER_BASE_URL + environment.CUSTOMER.DELETE_CUSTOMER+"/";
     // "http://localhost:3000/customer/delete/:id"
-    return this.HttpClient.delete(url,id)
+    console.log("from delete customer",url)
+    return this.HttpClient.delete("http://localhost:3000/customer/delete/" +id);
   }
   searchcustomer(keyword){
     
