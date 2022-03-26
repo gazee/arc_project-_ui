@@ -27,10 +27,10 @@ export class AddCustomersComponent implements OnInit {
   }
 
   onsubmit(value:any){
-    // console.log(value)
+    console.log(value)
   this.CustomerService.addcustomer(this.user).subscribe(res=>console.log('from ts',res))
   
-    this.router.navigate(['/customer'])
+     this.router.navigate(['/customer'])
   }
   
 

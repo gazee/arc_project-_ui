@@ -30,8 +30,10 @@ export class CustomerService {
     let url=environment.CUSTOMER_BASE_URL +environment.CUSTOMER.ADD_CUSTOMER
     return this.HttpClient.post(url,emp);
   }
-  editcustomer(id,customerObj){
-
+  editcustomer(id:any,user:any){
+    let url=environment.CUSTOMER_BASE_URL + environment.CUSTOMER.UPDATE_CUSTOMER +"/";
+    // return this.HttpClient.put("http://localhost:30000/employee/"+id,user)
+    return this.HttpClient.put(url +id,user);
   }
 
   deletecustomer(id){

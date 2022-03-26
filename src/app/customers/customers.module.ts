@@ -9,6 +9,7 @@ import { AddCustomersComponent } from './add-customers/add-customers.component';
 import { DeleteCustomersComponent } from './delete-customers/delete-customers.component';
 import { SearchCustomersComponent } from './search-customers/search-customers.component';
 import { ViewCustomerComponent } from './view-customer/view-customer.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -22,6 +23,9 @@ import { ViewCustomerComponent } from './view-customer/view-customer.component';
     ViewCustomerComponent
   ],
   imports: [
+    // RouterModule.forRoot([
+    //   {path: '', component:CustomersComponent}
+    // ],{ onSameUrlNavigation: 'reload' }),
     CommonModule,
     CustomersRoutingModule,FormsModule ,ReactiveFormsModule
   ]
